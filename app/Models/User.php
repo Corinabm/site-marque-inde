@@ -54,4 +54,9 @@ class User extends Authenticatable implements FilamentUser
     {
         return $this->role === 'admin';
     }
+
+    public static function canDelete(Model $record): bool
+    {
+        return auth()->user()->role === 'admin';
+    }
 }
