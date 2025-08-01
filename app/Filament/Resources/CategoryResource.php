@@ -30,7 +30,7 @@ class CategoryResource extends Resource
               // ajouter
                 TextInput::make('name')
                 ->required()
-                ->unique(ingnoreRecord: true)
+                ->unique(ignoreRecord: true)
                 ->maxLength(255),
             FileUpload::make('image')
             ->image()
