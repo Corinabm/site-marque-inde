@@ -13,6 +13,11 @@ return new class extends Migration
     {
         Schema::create('websites', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('user_id')->contrained()->onDelete('cascade');
+            $table->string('url')->unique();
+            $table->string('name');
+            $table->text('description')->nullable();
+            $table->unsignedBigInteger('nombre_vues')->default(0);
             $table->timestamps();
         });
     }
