@@ -36,7 +36,7 @@ class CategoryResource extends Resource
             ->image()
             ->disk('public')//stocker dans le dossier public
             ->directory('categories')//image stocké dans public/categories
-            ->required(),
+            /*->required(),*/
             ]);
     }
 
